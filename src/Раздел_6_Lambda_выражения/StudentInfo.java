@@ -1,6 +1,7 @@
 package Раздел_6_Lambda_выражения;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class StudentInfo {
 
@@ -16,11 +17,14 @@ public class StudentInfo {
         students.add(student3);
         students.add(student4);
         students.add(student5);
+        students.sort(Comparator.comparing(o -> o.course));
+        System.out.println("students = " + students);
+        System.out.println("-------------------------------");
         StudentInfo studentInfo = new StudentInfo();
         studentInfo.printStudentsOverGrade(students, 8);
-        System.out.println("-----------------------------  ");
+        System.out.println("-------------------------------");
         studentInfo.printStudentsOverGrade(students, 10);
-        System.out.println("-----------------------------  ");
+        System.out.println("-------------------------------");
         studentInfo.printStudentsUnderAge(students, 30);
         System.out.println("-------------------------------");
         studentInfo.printStudentsUnderAge(students, 20);
@@ -36,6 +40,10 @@ public class StudentInfo {
         studentInfo.testStudents(students, s -> s.avgGrade > 8);
         System.out.println("-------------------------------");
         studentInfo.testStudents(students, s -> s.avgGrade < 9.3 && s.age > 20 && s.sex == 'f');
+        System.out.println("-------------------------------");
+        StudentChecks studentChecks = s -> s.age < 30;
+        studentInfo.testStudents(students, studentChecks);
+        System.out.println("-------------------------------");
     }
 
     void testStudents(ArrayList<Student> students, StudentChecks studentChecks) {

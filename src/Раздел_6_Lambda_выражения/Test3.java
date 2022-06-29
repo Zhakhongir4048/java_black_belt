@@ -3,7 +3,11 @@ package Раздел_6_Lambda_выражения;
 public class Test3 {
 
     public static void main(String[] args) {
-        def(() -> 4);
+        int i = 10;
+        def(() -> {
+            System.out.println(i);
+            return 4 + i;
+        });
     }
 
     static void def(I2 i) {
