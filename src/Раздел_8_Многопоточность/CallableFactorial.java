@@ -14,7 +14,7 @@ public class CallableFactorial {
             // Смотрит что task закончился
             System.out.println(future.isDone());
             System.out.println("Хотим получить результат");
-            // Смотрит что task закончился
+            // Смотрит что task закончился, если task не завершён ещё, то поток main lock
             factorialResult = future.get();
             System.out.println("Получили результат");
             System.out.println(future.isDone());
