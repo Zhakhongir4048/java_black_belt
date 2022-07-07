@@ -17,3 +17,13 @@ public class FileReaderEx {
     }
 
 }
+/*
+Try with resources
+try( FileWriter writer = new FileWriter(“file1.txt”);
+FileReader reader= new FileReader(“file1.txt”);)
+{
+//SOME CODE…
+}
+Ресурс, который используется в Try with resources
+должен имплементировать интерфейс AutoCloseable
+*/
