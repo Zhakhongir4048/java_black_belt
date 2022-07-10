@@ -2,7 +2,7 @@ package Раздел_10_Регулярные_выражения;
 
 import java.util.regex.Pattern;
 
-ppublic class Regex28 {
+public class Regex28 {
 
     void checkIP(String ip) {
         String regex = "((25[0-5]|2[0-4]\\d|[01]?\\d?\\d)(\\.)){3}" +
