@@ -7,15 +7,15 @@ public class PrintfExample {
     }
 
     public static void main(String[] args) {
-        Employee emp1 = new Employee(1, "Zaur", "Tregulov", 12345, 0.15);
+        Employee emp1 = new Employee(1, "Заур", "Тройников", 12345, 0.15);
         Employee emp2 = new Employee(15, "Ivan", "Petrov", 6542, 0.08);
-        Employee emp3 = new Employee(123, "Mariya", "Sidorova", 8542, 0.12);
+        Employee emp3 = new Employee(123, "Mariya", "Сидорова", 8542, 0.12);
         employeeInfo(emp1);
         employeeInfo(emp2);
         employeeInfo(emp3);
         String newString = String.
                 format("%03d \t %-12s \t %-12s \t %,.1f \n",
-                        1, "Zaur", "Tregulov", 12345 * (1 + 0.15));
+                        1, "Заур", "Тройников", 12345 * (1 + 0.15));
         System.out.println(newString);
     }
 }
