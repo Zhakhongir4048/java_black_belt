@@ -37,3 +37,20 @@ class Employee {
     }
 
 }
+/*
+Методы printf и format
+%[flags][width][.precision]datatype_specifier
+flags DT specifiers
+«-» выравнивание по
+левому краю
+«0» добавление нулей
+перед числом
+«,» разделитель
+разрядов в числах
+«b» boolean
+«c» character
+«d» целое
+число
+«f» десятичное
+число
+*/
