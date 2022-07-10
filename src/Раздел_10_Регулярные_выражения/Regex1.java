@@ -50,14 +50,11 @@ public class Regex1 {
         String s2 = "chuck@gmail.com";
         boolean result = s2.matches("\\w+@\\w+\\.(ru|com)");
         System.out.println(result);
+        System.out.println("-------------------");
 
         String[] array = s.split(" ");
         System.out.println(Arrays.toString(array));
-
-        matcher = pattern4.matcher(s);
-        while (matcher.find()) {
-            System.out.println(matcher.group());
-        }
+        System.out.println("-------------------");
 
     }
 
