@@ -17,18 +17,35 @@ public class Regex1 {
 
         // Находим все слова в выражении
         Pattern pattern = Pattern.compile("\\w+");
-        System.out.println("pattern = " + pattern);
+        Matcher matcher = pattern.matcher(s);
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+        }
+        System.out.println("-------------------");
 
         // Находим все номера домов и квартир. \\b - Соответствует границе слова или числа
         Pattern pattern2 = Pattern.compile("\\b\\d{2}\\b");
-        System.out.println("pattern2 = " + pattern2);
+        matcher = pattern2.matcher(s);
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+        }
+        System.out.println("-------------------");
 
         // Находим все номера телефона
         Pattern pattern3 = Pattern.compile("\\+\\d{9}\\b");
-        System.out.println("pattern3 = " + pattern3);
+        matcher = pattern3.matcher(s);
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+        }
+        System.out.println("-------------------");
 
         // Находим все email
         Pattern pattern4 = Pattern.compile("\\w+@\\w+\\.(ru|com)");
+        matcher = pattern4.matcher(s);
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+        }
+        System.out.println("-------------------");
 
         String s2 = "chuck@gmail.com";
         boolean result = s2.matches("\\w+@\\w+\\.(ru|com)");
@@ -37,7 +54,7 @@ public class Regex1 {
         String[] array = s.split(" ");
         System.out.println(Arrays.toString(array));
 
-        Matcher matcher = pattern4.matcher(s);
+        matcher = pattern4.matcher(s);
         while (matcher.find()) {
             System.out.println(matcher.group());
         }
